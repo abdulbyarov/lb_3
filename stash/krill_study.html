@@ -19,11 +19,6 @@
         margin-bottom: 1em;
       }
     </style>
-    var urls = [ "/page1.html", "/page2.html", "/page3.html", "/page4.html",
-    "/page5.html", "/page6.html", "/page7.html", "/page8.html", ];
-    document.getElementById("random-link").addEventListener("click", function(){
-    var url = urls[Math.floor(Math.random()*urls.length)] alert("вы собираетесь
-    перейти по ссылке: " + url); this.href = url; });
   </head>
   <body>
     <div class="container text-center my-5">
@@ -67,5 +62,29 @@
       </div>
     </div>
     <a href="/" id="random-link">случайная ссылка</a>
+    <table>
+      <tr>
+        <td>
+          <a id="link" href=""><img src="pic01.png" alt="123" /></a>
+        </td>
+      </tr>
+    </table>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <script>
+      var a = [];
+      a[0] = "0001.html";
+      a[1] = "0002.html";
+      a[2] = "0003.html";
+      function rand(min, max) {
+        if (max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        } else {
+          return Math.floor(Math.random() * (min + 1));
+        }
+      }
+      window.document.getElementById("link").onmouseover = function () {
+        this.setAttribute("href", a[rand(0, 2)]);
+      };
+    </script>
   </body>
 </html>
