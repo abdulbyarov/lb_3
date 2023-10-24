@@ -61,20 +61,30 @@
         </div>
       </div>
     </div>
-    <a href="/" id="random-link">случайная ссылка</a>
     <table>
       <tr>
         <td>
-          <a id="link" href=""><img src="pic01.png" alt="123" /></a>
+          <a id="link" href="">посмотреть ответы</a>
         </td>
       </tr>
     </table>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
     <script>
       var a = [];
-      a[0] = "0001.html";
-      a[1] = "0002.html";
-      a[2] = "0003.html";
+      a[0] = "result1.html";
+      a[1] = "result2.html";
+      a[2] = "result3.html";
+      a[3] = "result4.html";
+      a[4] = "result5.html";
+      a[5] = "result6.html";
+      a[6] = "result7.html";
+      a[7] = "result8.html";
+      a[8] = "result9.html";
+      a[9] = "result10.html";
+      a[10] = "result11.html";
+      a[11] = "result12.html";
+      a[12] = "result13.html";
+
       function rand(min, max) {
         if (max) {
           return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -83,7 +93,7 @@
         }
       }
       window.document.getElementById("link").onmouseover = function () {
-        this.setAttribute("href", a[rand(0, 2)]);
+        this.setAttribute("href", a[rand(0, 12)]);
       };
     </script>
   </body>
