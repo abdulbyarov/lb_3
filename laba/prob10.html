@@ -377,6 +377,44 @@
                 </div>
               </div>
             </form>
+            <table>
+              <tr>
+                <td>
+                  <a id="link" href="" class="btn btn-secondary">Ответы</a>
+                </td>
+              </tr>
+            </table>
+            <meta
+              http-equiv="Content-Type"
+              content="text/html; charset=windows-1251"
+            />
+            <script>
+              var a = [];
+              a[0] = "result1.html";
+              a[1] = "result2.html";
+              a[2] = "result3.html";
+              a[3] = "result4.html";
+              a[4] = "result5.html";
+              a[5] = "result6.html";
+              a[6] = "result7.html";
+              a[7] = "result8.html";
+              a[8] = "result9.html";
+              a[9] = "result10.html";
+              a[10] = "result11.html";
+              a[11] = "result12.html";
+              a[12] = "result13.html";
+
+              function rand(min, max) {
+                if (max) {
+                  return Math.floor(Math.random() * (max - min + 1)) + min;
+                } else {
+                  return Math.floor(Math.random() * (min + 1));
+                }
+              }
+              window.document.getElementById("link").onmouseover = function () {
+                this.setAttribute("href", a[rand(0, 12)]);
+              };
+            </script>
           </div>
         </div>
       </div>
@@ -403,6 +441,7 @@
         $.get("/home/pageloaded", function (data) {});
       }, 250);
     </script>
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
       (function (d, w, c) {
@@ -442,6 +481,7 @@
           alt=""
         /></div
     ></noscript>
+
     <!-- /Yandex.Metrika counter -->
     <!-- Google Analytics counter -->
     <script>
@@ -468,6 +508,7 @@
       ga("create", "UA-20711714-2", "auto");
       ga("send", "pageview");
     </script>
+
     <!-- /Google Analytics counter -->
     <!-- Google tag (gtag.js) -->
     <script
